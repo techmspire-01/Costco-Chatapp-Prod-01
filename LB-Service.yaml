@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecomm-service
+  namespace: dev-env
+spec:
+  type: LoadBalancer
+  selector:
+    app: costco-chatapp
+  ports:
+  - port: 80
+    targetPort: 80
