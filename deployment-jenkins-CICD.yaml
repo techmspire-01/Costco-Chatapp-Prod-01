@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: costco-chatapp-deployment
+  labels:
+    app: costco-chatapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: costco-chatapp
+  template:
+    metadata:
+      labels:
+        app: costco-chatapp
+    spec:
+      containers:
+      - name: costco-chatapp-container
+        image: mthengne/techmspire-01:costco-chatapp-v1
+        ports:
+        - containerPort: 80
