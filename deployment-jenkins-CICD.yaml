@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: costco-chatapp-container
-        image: mthengne/mavenwebapp-01
+        image: mavenwebapp-01
         ports:
         - containerPort: 80
 
