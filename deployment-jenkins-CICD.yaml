@@ -19,3 +19,17 @@ spec:
         image: mthengne/techmspire-01:costco-chatapp-v1
         ports:
         - containerPort: 80
+
+---
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: mavenwebappsvc
+  spec:
+    type: LoadBalancer
+    selector:
+     app: mavenwebapp
+    ports:
+     - port: 80
+       targetPort: 8080
+...
